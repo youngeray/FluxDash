@@ -15,6 +15,9 @@ from utils.common_util import worship
 from utils.log_util import logger
 from fastapi import FastAPI, Request
 
+from fastapi.middleware.wsgi import WSGIMiddleware
+from dashapp.dashapp import create_dash_app
+
 from utils.response_util import ResponseUtil
 
 
@@ -43,6 +46,9 @@ app = FastAPI(
     root_path=AppConfig.app_root_path,
 )
 
+# 挂载Dash应用
+dash_app = create_dash_app(requests_pathname_prefix="/dash/")
+app.mount("/dash", WSGIMiddleware(dash_app.server))
 
 # 定义中间件
 @app.middleware("http")

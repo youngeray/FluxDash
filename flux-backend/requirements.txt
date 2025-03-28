@@ -30,3 +30,6 @@ tinify==1.6.0
 beautifulsoup4==4.12.3
 granian==2.2.0
 uvicorn_worker==0.3.0
+dash==2.18.2
+feffery-antd-charts==0.1.5
+feffery-antd-components==0.3.15

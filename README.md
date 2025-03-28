@@ -2,8 +2,8 @@
 	<img alt="logo" src="https://github.com/user-attachments/assets/9ce3fa2b-7751-4d20-b1e0-601eeb60291d">
 
 </p>
-<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">Flux Panel</h1>
-<h4 align="center">基于FastAPI+Vue3，实现前后端分离的快速开发框架,支持自动生成代码</h4>
+<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">FluxDash</h1>
+<h4 align="center">基于FastAPI+Vue3+Dash，实现前后端分离的快速开发框架,支持自动生成代码</h4>
 <p align="center">
     <a href="https://github.com/Richard0403/FluxPanel"><img src="https://img.shields.io/github/stars/Richard0403/FluxPanel?style=social"></a>
 	  <img src="https://img.shields.io/github/license/mashape/apistatus.svg"></a>
@@ -11,7 +11,26 @@
     <img src="https://img.shields.io/badge/MySQL-≥5.7-blue">
 </p>
 
-## 平台简介
+## 本项目简介
+本仓库基于[FluxPanel](https://github.com/Richard0403/FluxPanel)项目修改，将[Dash Plotly](https://github.com/plotly/dash)库挂载到fastapi后台上，用Dash的第三方库[feffery-antd-components](https://github.com/CNFeffery/feffery-antd-components)和[feffery-antd-charts](https://github.com/CNFeffery/feffery-antd-charts)做数据分析与呈现。
+
+## 为什么要做这个项目
+给不熟悉前端但是有数据分析需求的人提供一个使用纯python开发后台管理系统的思路。
+
+使用[FluxPanel](https://github.com/Richard0403/FluxPanel)根据数据库表结构或者SQL建表语句，自动生成ORM代码、增删改查逻辑、前端一体化表格、api接口。
+
+然后用[Dash Plotly](https://github.com/plotly/dash)、[feffery-antd-components](https://github.com/CNFeffery/feffery-antd-components)、[feffery-antd-charts](https://github.com/CNFeffery/feffery-antd-charts)做数据分析呈现。
+
+
+## 如何开发部署
+
+具体开发环境和部署方式请参考 FluxPanel简介。
+
+挂载的Dash应用在`flux-backend/dashapp`目录下，`dashapp.py`是入口文件，`pages`目录下是各个页面文件。dash页面对应的地址为：`http://localhost:9099/dash/filename`，将dash页面地址绑定到FluxPanel的导航菜单上即可使用。
+
+![img](flux-backend\assets\images\b5f606159fbf005e319e914e6a97691.png)
+
+## FluxPanel简介
 
 FluxPanel是一套全部开源的快速开发平台，毫无保留给个人及企业免费使用。
 

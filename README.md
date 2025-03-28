@@ -28,7 +28,7 @@
 
 挂载的Dash应用在`flux-backend/dashapp`目录下，`dashapp.py`是入口文件，`pages`目录下是各个页面文件。dash页面对应的地址为：`http://localhost:9099/dash/filename`，将dash页面地址绑定到FluxPanel的导航菜单上即可使用。
 
-![img](flux-backend\assets\images\b5f606159fbf005e319e914e6a97691.png)
+![img](https://github.com/youngeray/FluxDash/blob/main/flux-backend/assets/images/b5f606159fbf005e319e914e6a97691.png?raw=true)
 
 ## FluxPanel简介
 
